@@ -1,0 +1,174 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Titli | Product Lifecycle Decision System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>🦋 Project Titli</h1>
+            <p>A Data-Driven Product Lifecycle Decision System</p>
+        </div>
+        <span class="status">● System Online</span>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h2>Smart Product Decisions</h2>
+            <p>Analyze product condition, estimate costs, and decide whether to repair, replace, or compare options.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Products Analyzed</p>
+                <h2 id="totalProducts">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Repair Recommended</p>
+                <h2 id="repairCount">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Replace Recommended</p>
+                <h2 id="replaceCount">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Estimated Savings</p>
+                <h2 id="totalSavings">₹0</h2>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>🔍 Product Analysis</h2>
+
+            <form id="productForm">
+                <div class="form-grid">
+                    <div>
+                        <label for="productName">Product Name</label>
+                        <input id="productName" type="text"
+                               placeholder="e.g. Laptop" required>
+                    </div>
+
+                    <div>
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="">Select category</option>
+                            <option>Electronics</option>
+                            <option>Home Appliances</option>
+                            <option>Furniture</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="age">Product Age (years)</label>
+                        <input id="age" type="number" min="0"
+                               step="0.1" placeholder="e.g. 3" required>
+                    </div>
+
+                    <div>
+                        <label for="condition">Product Condition</label>
+                        <select id="condition" required>
+                            <option value="">Select condition</option>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Average">Average</option>
+                            <option value="Poor">Poor</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="purchaseCost">Original Cost (₹)</label>
+                        <input id="purchaseCost" type="number"
+                               min="0" step="0.01" placeholder="e.g. 50000" required>
+                    </div>
+
+                    <div>
+                        <label for="repairCost">Repair Cost (₹)</label>
+                        <input id="repairCost" type="number"
+                               min="0" step="0.01" placeholder="e.g. 5000" required>
+                    </div>
+
+                    <div>
+                        <label for="replacementCost">Replacement Cost (₹)</label>
+                        <input id="replacementCost" type="number"
+                               min="0" step="0.01" placeholder="e.g. 40000" required>
+                    </div>
+
+                    <div>
+                        <label for="usage">Usage Level</label>
+                        <select id="usage" required>
+                            <option value="">Select usage</option>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Analyze Product
+                </button>
+            </form>
+        </section>
+
+        <section id="resultPanel" class="panel hidden">
+            <h2>📊 Analysis Result</h2>
+            <div id="resultContent"></div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>📈 Decision Overview</h2>
+                <button id="exportBtn" class="secondary-btn">
+                    Export CSV
+                </button>
+            </div>
+            <canvas id="decisionChart"></canvas>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>📋 Product History</h2>
+                <button id="clearBtn" class="danger-btn">
+                    Clear History
+                </button>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Condition</th>
+                            <th>Repair Cost</th>
+                            <th>Replacement Cost</th>
+                            <th>Decision</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <tr>
+                            <td colspan="6" class="empty">
+                                No products analyzed yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Project Titli © 2026 | Data → Insight → Decision</p>
+        <p>Built for smarter and more sustainable product lifecycle decisions.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```

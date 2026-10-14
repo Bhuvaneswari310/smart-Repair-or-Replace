@@ -1,0 +1,74 @@
+PROJECT TITLI
+A Data-Driven Product Lifecycle Decision System
+
+1. PROJECT OVERVIEW
+
+Project Titli is a web-based product analysis dashboard that helps users compare repair and replacement costs and make more informed product lifecycle decisions.
+
+The project follows this concept:
+
+Data → Insight → Decision
+
+2. FEATURES
+
+- Product details entry form
+- Product health score estimation
+- Repair, Replace, or Compare recommendations
+- Dashboard statistics
+- Product analysis history
+- Decision overview chart
+- CSV export
+- Browser-based history storage
+- Responsive design for desktop and mobile
+
+3. TECHNOLOGIES USED
+
+- HTML5
+- CSS3
+- JavaScript
+- Chart.js
+- Browser Local Storage
+
+4. HOW TO RUN THE PROJECT
+
+Step 1: Download or clone this repository from GitHub.
+
+Step 2: Keep these files in the same folder:
+- index.html
+- style.css
+- script.js
+- README.txt
+
+Step 3: Open index.html in a web browser.
+
+Step 4: Enter the product details and click Analyze Product.
+
+Step 5: Review the recommendation, dashboard statistics, and product history.
+
+Note: An internet connection is required to load Chart.js from its CDN.
+
+5. DATA STORAGE
+
+This frontend version saves analysis history in the browser's Local Storage. The data is not stored in a shared online database and may not appear on another browser or device.
+
+6. DECISION LOGIC
+
+The system uses simple rule-based comparisons of repair and replacement costs. It also calculates an estimated product health score using product condition, age, and usage.
+
+The recommendation is an educational estimate and should not replace professional product inspection.
+
+7. FUTURE ENHANCEMENTS
+
+- Python Flask backend API
+- SQLite or cloud database integration
+- User authentication
+- Advanced analytics
+- Machine learning-based recommendations
+- Product maintenance history
+
+8. PROJECT PURPOSE
+
+The goal of Project Titli is to demonstrate how product data can support cost-aware and sustainability-focused decisions.
+
+Project Titli
+Data → Insight → Decision
