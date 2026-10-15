@@ -1,74 +1,37 @@
-PROJECT TITLI
-A Data-Driven Product Lifecycle Decision System
+# 🌿 PLDS – Product Lifecycle Decision Support
 
-1. PROJECT OVERVIEW
+### Give Every Product a Better Future
+**Repair or Replace**
 
-Project Titli is a web-based product analysis dashboard that helps users compare repair and replacement costs and make more informed product lifecycle decisions.
+PLDS is a web-based project designed to help users explore product health, compare repair and replacement costs, understand environmental impact, and make more sustainable product lifecycle decisions.
 
-The project follows this concept:
+## ✨ Key Features
 
-Data → Insight → Decision
+- 🔐 **Login Page** – Demo sign-in interface with password visibility control.
+- 💚 **Product Health Card** – Calculates an illustrative product health score.
+- 🔧 **Repair vs Replace** – Compares repair and replacement costs.
+- 🌱 **Eco Impact Score** – Provides basic sustainability guidance.
+- ⚙️ **Failure Risk Analysis** – Estimates risk using product age, usage, and maintenance inputs.
+- 🤖 **Lifecycle Chatbot** – Provides built-in answers about repair, maintenance, reuse, and recycling.
+- 🌐 **Language Selection** – Offers basic language options.
+- 📊 **Reports & History** – Stores assessment summaries and supports CSV export.
+- 📱 **QR Product Passport** – Demonstrates a product passport interface with a decorative QR-style pattern.
+- 🖼️ **Image Upload** – Allows users to select and preview product images.
+- ℹ️ **About Page** – Explains the project purpose and available features.
 
-2. FEATURES
-
-- Product details entry form
-- Product health score estimation
-- Repair, Replace, or Compare recommendations
-- Dashboard statistics
-- Product analysis history
-- Decision overview chart
-- CSV export
-- Browser-based history storage
-- Responsive design for desktop and mobile
-
-3. TECHNOLOGIES USED
+## 🛠️ Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript
-- Chart.js
-- Browser Local Storage
+- Python
 
-4. HOW TO RUN THE PROJECT
+## 📁 Project Structure
 
-Step 1: Download or clone this repository from GitHub.
-
-Step 2: Keep these files in the same folder:
-- index.html
-- style.css
-- script.js
-- README.txt
-
-Step 3: Open index.html in a web browser.
-
-Step 4: Enter the product details and click Analyze Product.
-
-Step 5: Review the recommendation, dashboard statistics, and product history.
-
-Note: An internet connection is required to load Chart.js from its CDN.
-
-5. DATA STORAGE
-
-This frontend version saves analysis history in the browser's Local Storage. The data is not stored in a shared online database and may not appear on another browser or device.
-
-6. DECISION LOGIC
-
-The system uses simple rule-based comparisons of repair and replacement costs. It also calculates an estimated product health score using product condition, age, and usage.
-
-The recommendation is an educational estimate and should not replace professional product inspection.
-
-7. FUTURE ENHANCEMENTS
-
-- Python Flask backend API
-- SQLite or cloud database integration
-- User authentication
-- Advanced analytics
-- Machine learning-based recommendations
-- Product maintenance history
-
-8. PROJECT PURPOSE
-
-The goal of Project Titli is to demonstrate how product data can support cost-aware and sustainability-focused decisions.
-
-Project Titli
-Data → Insight → Decision
+```text
+PLDS-Enhanced-Project/
+├── app.py
+├── index.html
+├── style.css
+├── script.js
+└── README.md
