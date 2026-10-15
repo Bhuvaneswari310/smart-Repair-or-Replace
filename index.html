@@ -1,1 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PLDS — Product Lifecycle Decision Support</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div id="loginScreen" class="login-screen">
+  <div class="login-art">
+    <div class="brand-mark">🌿</div>
+    <p class="eyebrow">SMARTER DECISIONS · LONGER LIFE</p>
+    <h1>Give every product<br><span>a better future.</span></h1>
+    <p class="login-promise">Repair or Replace</p>
+    <p>Make smarter, more sustainable product lifecycle decisions with PLDS.</p>
+    <div class="orbit">♻️</div>
+  </div>
+
+  <form id="loginForm" class="login-card">
+    <button type="button" id="backHome" class="back-home">← Back to home</button>
+    <div class="mini-brand">🌱 <b>PLDS</b></div>
+    <h2>Welcome back</h2>
+    <p class="muted">Sign in to your workspace</p>
+
+    <label>Email address</label>
+    <input id="loginEmail" type="email" placeholder="you@example.com" required>
+
+    <label>Password</label>
+    <div class="password-wrap">
+      <input id="loginPassword" type="password" placeholder="Enter password" required minlength="4">
+      <button type="button" id="togglePassword" class="eye" aria-label="Show password">👁</button>
+    </div>
+
+    <div class="login-row">
+      <label class="remember"><input type="checkbox" id="remember"> Remember me</label>
+      <a href="#" id="forgotLink">Forgot password?</a>
+    </div>
+
+    <button class="primary full" type="submit">Sign in <span>→</span></button>
+    <p class="login-note">Demo login: enter any valid email and a password with 4+ characters.</p>
+    <p id="loginError" class="error" aria-live="polite"></p>
+  </form>
+</div>
+
+<div id="appShell" class="app-shell hidden">
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-leaf">🌿</span>
+    <div>
+      <strong>PLDS</strong>
+      <small>Product Lifecycle Decision Support</small>
+    </div>
+  </div>
+
+  <div class="tagline">Smarter Decisions <i>·</i> Longer Life <i>·</i> Greener Tomorrow</div>
+
+  <div class="top-actions">
+    <button class="icon-btn" id="notifyBtn" title="Notifications">♧</button>
+    <button class="header-login" id="headerLogin" type="button">🔐 Login</button>
+    <button class="user-chip hidden" id="profileBtn">
+      <span class="avatar">👤</span>
+      <span><small>Welcome,</small><b id="userName">User</b></span>⌄
+    </button>
+  </div>
+</header>
+
+<nav class="feature-topnav" id="topFeatureNav" aria-label="Main feature navigation">
+  <button class="top-feature-link active" data-home>🏠 Home</button>
+  <button class="top-feature-link" data-open="health">💚 Product Health</button>
+  <button class="top-feature-link" data-open="repair">🔧 Repair vs Replace</button>
+  <button class="top-feature-link" data-open="eco">🌿 Eco Impact</button>
+  <button class="top-feature-link" data-open="risk">⚙️ Failure Risk</button>
+  <button class="top-feature-link" data-open="chat">🤖 Chatbot</button>
+  <button class="top-feature-link" data-open="language">🌐 Language</button>
+  <button class="top-feature-link" data-open="reports">📊 Reports</button>
+  <button class="top-feature-link" data-open="qr">▦ QR Passport</button>
+  <button class="top-feature-link" data-open="upload">🖼️ Image Upload</button>
+  <button class="top-feature-link" data-open="about">ℹ️ About</button>
+</nav>
+
+<aside class="sidebar">
+  <nav id="sideNav">
+    <button class="nav-item active" data-view="dashboard">⌂ <span>Dashboard</span></button>
+    <button class="nav-item" data-view="features">▦ <span>Features</span></button>
+    <button class="nav-item" data-view="reports">▤ <span>Reports & History</span></button>
+    <button class="nav-item" data-view="settings">⚙ <span>Settings</span></button>
+    <button class="nav-item logout" id="logoutBtn">⇥ <span>Logout</span></button>
+  </nav>
+
+  <div class="sidebar-eco">
+    <div>🌍</div>
+    <b>Reduce<br>Reuse<br>Recycle</b>
+  </div>
+</aside>
+
+<main class="main-content">
+
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">PRODUCT LIFECYCLE INTELLIGENCE</p>
+      <h1 id="pageTitle">Explore Our Features</h1>
+      <p id="pageSubtitle">Choose a feature to get started and make smarter, sustainable decisions.</p>
+    </div>
+    <div class="date-pill">● <span id="todayLabel"></span></div>
+  </div>
+
+  <section id="dashboardView">
+    <div class="dashboard-layout">
+      <div>
+        <div class="feature-grid" id="featureGrid"></div>
+
+        <div class="welcome-banner">
+          <div class="welcome-icon">🔐</div>
+          <div>
+            <h3>Welcome to your PLDS workspace</h3>
+            <p>Open any feature card to explore its tools. Your saved assessments stay in this browser.</p>
+          </div>
+          <button class="round-arrow" data-open="health">→</button>
+        </div>
+      </div>
+
+      <aside class="right-panel">
+        <div id="featureDetail" class="detail-panel"></div>
+
+        <div class="overview-card">
+          <h3>Product Health Overview</h3>
+
+          <div class="score-row">
+            <div class="score-ring">
+              <strong id="overviewScore">85</strong>
+              <small>Health Score</small>
+            </div>
+
+            <div>
+              <span class="status-good">Good</span>
+              <p>Condition: <b id="overviewCondition">Good</b></p>
+              <p>Status: <b id="overviewStatus">Functional</b></p>
+            </div>
+          </div>
+
+          <div class="sample-product">
+            <b>Example product</b>
+            <p>💻 Laptop <span class="status-good">Functional</span></p>
+            <div class="progress"><span style="width:85%"></span></div>
+          </div>
+
+          <button class="primary full" data-open="health">Go to Product Health Card →</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="workspaceView" class="workspace hidden"></section>
+
+</main>
+
+<div id="toast" class="toast" role="status"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
